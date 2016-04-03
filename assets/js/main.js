@@ -13,6 +13,8 @@ window.onload = (function() {
 	var flexContainer = document.getElementById('flexbox-container');
 	var flexItems = document.getElementsByClassName('flex-item');
 	var optionsToggler = document.getElementsByClassName('flex-item-toggle');
+	var textArea = document.getElementById('box-content');
+	var cloneItem = flexItems[0].cloneNode(true);
 
 	// inicio contenedor flexbox
 	/**
@@ -26,16 +28,25 @@ window.onload = (function() {
 	 * Una vez añadido quizás haya que volver a 're-bindear' las opciones
 	 */
 	flexContainer.addItem = function (event = null, parent = null) {
+		event.preventDefault();
 		var parent = parent;
-		var node = document.createElement('div');
-		// TODO: crear html interior
-		node.innerHTML = '<p>Hello World</p>';
+		var node = cloneItem.cloneNode(true);
+		var content = textArea.value;
+		
+		if (null === content) {
+			content = 'Hello World';
+		}
+
+		node.childNodes[5].innerHTML = content;
 
 		if (null === parent) {
 			parent = this;
 		}
+
 		this.appendChild(node);
-		event.preventDefault();
+
+		bindToggles(); // Re-llamada
+		return true;
 	};
 
 	flexContainer.removeItem = function (event = null, child = null) {
@@ -46,6 +57,7 @@ window.onload = (function() {
 		this.removeChild(lastChild);
 		event.preventDefault();
 	};
+
 	// Bindear eventos para añadir/borrar nuevos elementos flex al contenedor
 	addButton.addEventListener('click', function(e) { flexContainer.addItem(e, null) });
 	deleteButton.addEventListener('click', function(e) { flexContainer.removeItem(e, null); });
@@ -57,12 +69,14 @@ window.onload = (function() {
 	 * de cada flexbox item. Así se podrán modificar individualmente
 	 * las opciones de cada item
 	 */
-	for (var i = 0; i < optionsToggler.length; i++) {
-		optionsToggler[i].addEventListener('click', function(event) {
-			// Obtener el hermano más cercano, que en este caso es el menú de opciones.
-			var sibling = this.nextElementSibling;
-			sibling.classList.toggle('hide');
-		}, false);
-	}
-
+	function bindToggles() {
+		for (var i = 0; i < optionsToggler.length; i++) {
+			optionsToggler[i].addEventListener('click', function(event) {
+				// Obtener el hermano más cercano, que en este caso es el menú de opciones.
+				var sibling = this.nextElementSibling;
+				sibling.classList.toggle('hide');
+			}, false);
+		}
+	};
+	bindToggles(); // Llamada al inicio
 })();
