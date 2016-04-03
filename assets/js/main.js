@@ -12,7 +12,7 @@ window.onload = (function() {
 	var content = document.getElementById('box-content');
 	var flexContainer = document.getElementById('flexbox-container');
 	var flexItems = document.getElementsByClassName('flex-item');
-	var optionsToggler = document.getElementsByClassName('flex-item-toggle');
+	var optionsToggle = document.getElementsByClassName('flex-item-toggle');
 	var textArea = document.getElementById('box-content');
 	var cloneItem = flexItems[0].cloneNode(true);
 
@@ -30,22 +30,34 @@ window.onload = (function() {
 	flexContainer.addItem = function (event = null, parent = null) {
 		event.preventDefault();
 		var parent = parent;
-		var node = cloneItem.cloneNode(true);
+		var node = cloneItem.cloneNode(true); // clonar nodo a crear
 		var content = textArea.value;
 		
-		if (null === content) {
+		// Si no existe el contenido, poner uno por defecto
+		if ('' === content) {
 			content = 'Hello World';
 		}
 
+		// Obtener la parte del nodo en la cual queremos insertar el contenido
+		// TODO: posible implementación de búsqueda por clase.
 		node.childNodes[5].innerHTML = content;
 
+		// Si no se pasa un padre al que añadir el hijo, tomar objeto actual.
 		if (null === parent) {
 			parent = this;
 		}
 
+		// Bindear menu toggle.
+		node.childNodes[1].addEventListener('click', function(event) {
+			var sibling = this.nextElementSibling;
+			sibling.classList.toggle('hide');
+		});
+		
+		// Introducir nuevo nodo
 		this.appendChild(node);
 
-		bindToggles(); // Re-llamada
+		// Rebindear
+		//bindToggles(); // Re-llamada
 		return true;
 	};
 
@@ -70,12 +82,12 @@ window.onload = (function() {
 	 * las opciones de cada item
 	 */
 	function bindToggles() {
-		for (var i = 0; i < optionsToggler.length; i++) {
-			optionsToggler[i].addEventListener('click', function(event) {
+		for (var i = 0; i < optionsToggle.length; i++) {
+			optionsToggle[i].addEventListener('click', function(event) {
 				// Obtener el hermano más cercano, que en este caso es el menú de opciones.
 				var sibling = this.nextElementSibling;
 				sibling.classList.toggle('hide');
-			}, false);
+			});
 		}
 	};
 	bindToggles(); // Llamada al inicio
