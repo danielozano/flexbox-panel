@@ -1,9 +1,17 @@
+.main-container {
+	clear: both;
+	display: block;
+	padding: 0px 12px;
+}
+/** contenedor flex */
 #flexbox-container {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: center;
 }
+
+/** elementos flex */
 .flex-item {
 	border: 1px solid black;
 	padding: 1em;

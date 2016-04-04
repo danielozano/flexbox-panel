@@ -33,6 +33,9 @@ window.onload = (function() {
 		var node = cloneItem.cloneNode(true); // clonar nodo a crear
 		var content = textArea.value;
 		
+		// una vez tomado el valor vaciar contenido del textarea
+		textArea.value = '';
+		
 		// Si no existe el contenido, poner uno por defecto
 		if ('' === content) {
 			content = 'Hello World';
