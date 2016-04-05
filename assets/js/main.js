@@ -94,4 +94,17 @@ window.onload = (function() {
 		}
 	};
 	bindToggles(); // Llamada al inicio
+
+	/**
+	 * TODO: bindear inputs, y aplicar sus cambios a los elementos correspondientes.
+	 */
+	var containerForm = document.getElementById('container-properties');
+	var containerInputs = containerForm.getElementsByTagName('input');
+	for (var i = 0; i < containerInputs.length; i++) {
+		containerInputs[i].addEventListener('click', function(event) {
+			var cssProperty = this.getAttribute('name');
+			var cssValue = this.value;
+			flexContainer.style[cssProperty] = cssValue;
+		});
+	}
 })();

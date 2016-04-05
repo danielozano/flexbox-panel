@@ -13,43 +13,43 @@
 		<section>
 			<h1>Flexbox Panel</h1>
 			<fieldset>
-				<form id="main-form" action="#">
-					<div class="flex-container">
+				<form id="container-form" action="#">
+					<div id="container-properties">
 						<div class="form-row">
 							<h4>Flex Direction:</h4>
 
 							<div class="form-input">
-								<input id="flex-direction-row" type="radio" name="flex-direction" value="row">
+								<input id="flex-direction-row" type="radio" name="flexDirection" value="row">
 								<label for="flex-direction">row</label>
 							</div>
 
 							<div class="form-input">
-								<input id="flex-direction-row-reverse" type="radio" name="flex-direction" value="row-reverse">
+								<input id="flex-direction-row-reverse" type="radio" name="flexDirection" value="row-reverse">
 								<label for="flex-direction-row-reverse">row-reverse</label>
 							</div>
 
 							<div class="form-input">
-								<input id="flex-direction-column" type="radio" name="flex-direction" value="column">
+								<input id="flex-direction-column" type="radio" name="flexDirection" value="column">
 								<label for="flex-direction-column">column</label>
 							</div>
 
 							<div class="form-input">
-								<input id="flex-direction-column-reverse" type="radio" name="flex-direction" value="column-reverse">
+								<input id="flex-direction-column-reverse" type="radio" name="flexDirection" value="column-reverse">
 								<label for="flex-direction-column-reverse">column-reverse</label>
 							</div>
 						</div>
 						<div class="form-row">
 							<h4>Flex Wrap</h4>
 							<div class="form-input">
-								<input type="radio" id="flex-wrap-nowrap" name="flex-wrap" value="nowrap">
+								<input type="radio" id="flex-wrap-nowrap" name="flexWrap" value="nowrap">
 								<label for="flex-wrap-nowrap">nowrap</label>
 							</div>						
 							<div class="form-input">
-								<input type="radio" id="flex-wrap-wrap" name="flex-wrap" value="wrap">
+								<input type="radio" id="flex-wrap-wrap" name="flexWrap" value="wrap">
 								<label for="flex-wrap-wrap">wrap</label>
 							</div>
 							<div class="form-input">
-								<input type="radio" id="flex-wrap-wrap-reverse" name="flex-wrap" value="wrap-reverse">
+								<input type="radio" id="flex-wrap-wrap-reverse" name="flexWrap" value="wrap-reverse">
 								<label for="flex-wrap-reverse">wrap-reverse</label>
 							</div>
 						</div>
@@ -58,27 +58,27 @@
 							<h4>Justify Content</h4>
 
 							<div class="form-input">
-								<input type="radio" id="justify-content-flex-start" name="justify-content" value="flex-start">
+								<input type="radio" id="justify-content-flex-start" name="justifyContent" value="flex-start">
 								<label for="justify-content-flex-start">flex-start</label>
 							</div>
 
 							<div class="form-input">
-								<input type="radio" id="justify-content-flex-end" name="justify-content" value="flex-end">
+								<input type="radio" id="justify-content-flex-end" name="justifyContent" value="flex-end">
 								<label for="justify-content-flex-end">flex-end</label>
 							</div>
 
 							<div class="form-input">
-								<input type="radio" id="justify-content-center" name="justify-content" value="center">
+								<input type="radio" id="justify-content-center" name="justifyContent" value="center">
 								<label for="justify-content-center">center</label>
 							</div>
 
 							<div class="form-input">
-								<input type="radio" id="justify-content-space-between" name="justify-content" value="space-between">
+								<input type="radio" id="justify-content-space-between" name="justifyContent" value="space-between">
 								<label for="justify-conten-space-between">space-between</label>
 							</div>
 
 							<div class="form-input">
-								<input type="radio" id="justify-content-space-around" name="justify-content" value="space-around">
+								<input type="radio" id="justify-content-space-around" name="justifyContent" value="space-around">
 								<label for="justify-content-space-around">space-around</label>
 							</div>
 						</div>
@@ -87,23 +87,23 @@
 						<div class="form-row">
 							<h4>Align Items</h4>
 							<div class="form-input">
-								<input type="radio" id="align-items-stretch" name="align-items" value="stretch">
+								<input type="radio" id="align-items-stretch" name="alignItems" value="stretch">
 								<label for="align-items-stretch">stretch</label>
 							</div>
 							<div class="form-input">
-								<input type="radio" id="align-items-flex-start" name="align-items" value="flex-start">
+								<input type="radio" id="align-items-flex-start" name="alignItems" value="flex-start">
 								<label for="align-items-flex-start">flex-start</label>
 							</div>
 							<div class="form-input">
-								<input type="radio" id="align-items-flex-end" name="align-items" value="flex-end">
+								<input type="radio" id="align-items-flex-end" name="alignItems" value="flex-end">
 								<label for="align-items-flex-end">flex-end</label>
 							</div>
 							<div class="form-input">
-								<input type="radio" id="align-items-center" name="align-items" value="center">
+								<input type="radio" id="align-items-center" name="alignItems" value="center">
 								<label for="align-items-center">center</label>
 							</div>
 							<div class="form-input">
-								<input type="radio" id="align-items-baseline" name="align-items" value="baseline">
+								<input type="radio" id="align-items-baseline" name="alignItems" value="baseline">
 								<label for="align-items-baseline">baseline</label>
 							</div>
 						</div>
@@ -112,27 +112,27 @@
 						<div class="form-row">
 							<h4>Align Content</h4>
 							<div class="form-input">
-								<input type="radio" id="align-content-stretch" name="align-content" value="stretch">
+								<input type="radio" id="align-content-stretch" name="alignContent" value="stretch">
 								<label for="align-content-stretch">stretch</label>
 							</div>
 							<div class="form-input">
-								<input type="radio" id="align-content-flex-start" name="align-content" value="flex-start">
+								<input type="radio" id="align-content-flex-start" name="alignContent" value="flex-start">
 								<label for="align-content-flex-start">flex-start</label>
 							</div>
 							<div class="form-input">
-								<input type="radio" id="align-content-flex-end" name="align-content" value="flex-end">
+								<input type="radio" id="align-content-flex-end" name="alignContent" value="flex-end">
 								<label for="align-content-flex-end">flex-end</label>
 							</div>
 							<div class="form-input">
-								<input type="radio" id="align-content-center" name="align-content" value="center">
+								<input type="radio" id="align-content-center" name="alignContent" value="center">
 								<label for="align-content-center">center</label>
 							</div>
 							<div class="form-input">
-								<input type="radio" id="align-content-space-between" name="align-content" value="space-between">
+								<input type="radio" id="align-content-space-between" name="alignContent" value="space-between">
 								<label for="align-content-space-between">space-between</label>
 							</div>
 							<div class="form-input">
-								<input type="radio" id="align-content-space-around" name="align-content" value="space-around">
+								<input type="radio" id="align-content-space-around" name="alignContent" value="space-around">
 								<label for="align-content-space-around">space-around</label>
 							</div>
 						</div>
