@@ -74,7 +74,10 @@ window.onload = (function() {
 	};
 
 	// Bindear eventos para añadir/borrar nuevos elementos flex al contenedor
-	addButton.addEventListener('click', function(e) { flexContainer.addItem(e, null); bindItemOptions(); });
+	addButton.addEventListener('click', function(e) { 
+		flexContainer.addItem(e, null); 
+		bindItemOptions();
+	});
 	deleteButton.addEventListener('click', function(e) { flexContainer.removeItem(e, null); });
 	// ----------- fin contendor flexbox
 	
@@ -137,4 +140,16 @@ window.onload = (function() {
 		}
 	};
 	bindItemOptions();
+
+	var widthBar = document.getElementById('item-width');
+	var itemWidthValue = document.getElementById('item-width-value');
+
+	widthBar.addEventListener('input', function(event) {
+		var value = this.value;
+		itemWidthValue.innerHTML = value;	
+		for (var i = 0; i < flexItems.length; i++) {
+			flexItems[i].style.width = value + "%";
+		}
+	})
+
 })();
