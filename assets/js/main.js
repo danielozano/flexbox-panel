@@ -74,7 +74,7 @@ window.onload = (function() {
 	};
 
 	// Bindear eventos para añadir/borrar nuevos elementos flex al contenedor
-	addButton.addEventListener('click', function(e) { flexContainer.addItem(e, null) });
+	addButton.addEventListener('click', function(e) { flexContainer.addItem(e, null); bindItemOptions(); });
 	deleteButton.addEventListener('click', function(e) { flexContainer.removeItem(e, null); });
 	// ----------- fin contendor flexbox
 	
@@ -96,7 +96,7 @@ window.onload = (function() {
 	bindToggles(); // Llamada al inicio
 
 	/**
-	 * TODO: bindear inputs, y aplicar sus cambios a los elementos correspondientes.
+	 * bindear inputs, y aplicar sus cambios a los elementos correspondientes.
 	 */
 	var containerForm = document.getElementById('container-properties');
 	var containerInputs = containerForm.getElementsByTagName('input');
@@ -107,4 +107,34 @@ window.onload = (function() {
 			flexContainer.style[cssProperty] = cssValue;
 		});
 	}
+
+	/**
+	 * Bindear opciones internas de cada flex-item
+	 */
+	var bindItemOptions = function() {
+		for (var i = 0; i < flexItems.length; i++) {
+			var parent = flexItems[i];
+			var inputs = flexItems[i].getElementsByTagName('input');
+			var select = flexItems[i].getElementsByTagName('select');
+			
+			select[0].addEventListener('input', function(event) {
+				var cssProperty = this.getAttribute('name');
+				var cssValue = this.value;
+
+				parent.style[cssProperty] = cssValue;
+			});
+
+			for (var j = 0; j < inputs.length; j++) {
+				var input = inputs[j];
+
+				input.addEventListener('input', function(event) {
+					var cssProperty = this.getAttribute('name');
+					var cssValue = this.value;
+					
+					parent.style[cssProperty] = cssValue;
+				});
+			};
+		}
+	};
+	bindItemOptions();
 })();
