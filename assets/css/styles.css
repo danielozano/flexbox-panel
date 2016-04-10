@@ -16,6 +16,7 @@
 .flex-item {
 	border: 1px solid black;
 	padding: 1em;
+	overflow: hidden;
 	position: relative;
 	width: 30%;
 }
@@ -125,4 +126,26 @@
 	.container-content label {
 		margin-right: 15px;
 	}	
+}
+/** contenedor de elementos flexbox */
+#flexbox-container {
+	background: #fff;
+	margin: 10px -12px;
+	padding: 22px 0;
+}
+/** footer */
+footer {
+	background: #000;
+	padding: 12px 8px;
+	text-align: center;
+}
+
+footer p { margin: 0px; }
+
+footer p a,
+footer p a:hover,
+footer p a:visited,
+footer p a:focus { 
+	color: #fff; 
+	text-decoration: none;
 }
