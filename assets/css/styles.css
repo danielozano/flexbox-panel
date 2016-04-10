@@ -1,7 +1,8 @@
 .main-container {
+	background: #c3c3c3;
 	clear: both;
 	display: block;
-	padding: 0px 12px;
+	padding: 22px 12px;
 }
 /** contenedor flex */
 #flexbox-container {
@@ -44,4 +45,84 @@
 }
 .hide{
 	display: none;
+}
+
+/** Opciones de contenedor */
+#container-properties {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+#container-properties .container-option {
+	background: #FFF080;
+	border: 1px solid #000;
+	flex: 1;
+	margin: 5px 0;
+	/**width: 100%;*/
+}
+
+.container-option h4 {
+	background: #000;
+	color: #fff;
+	letter-spacing: 1px;
+	margin: 0 0 10px 0;
+	padding: 12px 8px;
+	text-transform: uppercase;
+}
+.container-option .form-input {
+	display: block;
+	padding: 6px 8px;
+}
+
+@media screen and (min-width: 992px) {
+	#container-properties {
+		flex-direction: row;
+		justify-content: space-between;
+		/*width: 49%;*/
+	}
+
+	#container-properties .container-option {
+		margin: 5px;
+	}
+}
+/** input para width */
+ .container-width {
+	display: block;
+	float: left;
+	padding: 12px 4px;
+	width: 100%;
+}
+
+.container-width label,
+.container-width input,
+#item-width-value {
+	display: block;
+
+}
+@media screen and (min-width: 992px) {
+	.container-width label,
+	.container-width input,
+	#item-width-value {
+		display: inline-block;
+		float: left;
+		margin-right: 15px;
+	}	
+}
+/** textaera */
+.container-content {
+	display: block;
+	float: left;
+	padding: 12px 4px;
+	width: 100%;
+}
+
+.container-content label,
+.container-content textarea {
+	float: left;
+}
+
+@media screen and (min-width: 992px) {
+	.container-content label {
+		margin-right: 15px;
+	}	
 }

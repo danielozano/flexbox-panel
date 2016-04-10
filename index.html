@@ -12,151 +12,149 @@
 	<main class="main-container">
 		<section>
 			<h1>Flexbox Panel</h1>
-			<fieldset>
-				<form id="container-form" action="#">
-					<div id="container-properties">
-						<div class="form-row">
-							<h4>Flex Direction:</h4>
+			<form id="container-form" action="#">
+				<div id="container-properties">
+					<div class="container-option">
+						<h4>Flex Direction</h4>
 
-							<div class="form-input">
-								<input id="flex-direction-row" type="radio" name="flexDirection" value="row">
-								<label for="flex-direction">row</label>
-							</div>
-
-							<div class="form-input">
-								<input id="flex-direction-row-reverse" type="radio" name="flexDirection" value="row-reverse">
-								<label for="flex-direction-row-reverse">row-reverse</label>
-							</div>
-
-							<div class="form-input">
-								<input id="flex-direction-column" type="radio" name="flexDirection" value="column">
-								<label for="flex-direction-column">column</label>
-							</div>
-
-							<div class="form-input">
-								<input id="flex-direction-column-reverse" type="radio" name="flexDirection" value="column-reverse">
-								<label for="flex-direction-column-reverse">column-reverse</label>
-							</div>
+						<div class="form-input">
+							<input id="flex-direction-row" type="radio" name="flexDirection" value="row">
+							<label for="flex-direction-row">row</label>
 						</div>
-						<div class="form-row">
-							<h4>Flex Wrap</h4>
-							<div class="form-input">
-								<input type="radio" id="flex-wrap-nowrap" name="flexWrap" value="nowrap">
-								<label for="flex-wrap-nowrap">nowrap</label>
-							</div>						
-							<div class="form-input">
-								<input type="radio" id="flex-wrap-wrap" name="flexWrap" value="wrap">
-								<label for="flex-wrap-wrap">wrap</label>
-							</div>
-							<div class="form-input">
-								<input type="radio" id="flex-wrap-wrap-reverse" name="flexWrap" value="wrap-reverse">
-								<label for="flex-wrap-reverse">wrap-reverse</label>
-							</div>
+
+						<div class="form-input">
+							<input id="flex-direction-row-reverse" type="radio" name="flexDirection" value="row-reverse">
+							<label for="flex-direction-row-reverse">row-reverse</label>
 						</div>
-						<!-- justify-content -->
-						<div class="form-row">
-							<h4>Justify Content</h4>
 
-							<div class="form-input">
-								<input type="radio" id="justify-content-flex-start" name="justifyContent" value="flex-start">
-								<label for="justify-content-flex-start">flex-start</label>
-							</div>
-
-							<div class="form-input">
-								<input type="radio" id="justify-content-flex-end" name="justifyContent" value="flex-end">
-								<label for="justify-content-flex-end">flex-end</label>
-							</div>
-
-							<div class="form-input">
-								<input type="radio" id="justify-content-center" name="justifyContent" value="center">
-								<label for="justify-content-center">center</label>
-							</div>
-
-							<div class="form-input">
-								<input type="radio" id="justify-content-space-between" name="justifyContent" value="space-between">
-								<label for="justify-conten-space-between">space-between</label>
-							</div>
-
-							<div class="form-input">
-								<input type="radio" id="justify-content-space-around" name="justifyContent" value="space-around">
-								<label for="justify-content-space-around">space-around</label>
-							</div>
+						<div class="form-input">
+							<input id="flex-direction-column" type="radio" name="flexDirection" value="column">
+							<label for="flex-direction-column">column</label>
 						</div>
-						<!-- end justify-content -->
-						<!-- align items -->
-						<div class="form-row">
-							<h4>Align Items</h4>
-							<div class="form-input">
-								<input type="radio" id="align-items-stretch" name="alignItems" value="stretch">
-								<label for="align-items-stretch">stretch</label>
-							</div>
-							<div class="form-input">
-								<input type="radio" id="align-items-flex-start" name="alignItems" value="flex-start">
-								<label for="align-items-flex-start">flex-start</label>
-							</div>
-							<div class="form-input">
-								<input type="radio" id="align-items-flex-end" name="alignItems" value="flex-end">
-								<label for="align-items-flex-end">flex-end</label>
-							</div>
-							<div class="form-input">
-								<input type="radio" id="align-items-center" name="alignItems" value="center">
-								<label for="align-items-center">center</label>
-							</div>
-							<div class="form-input">
-								<input type="radio" id="align-items-baseline" name="alignItems" value="baseline">
-								<label for="align-items-baseline">baseline</label>
-							</div>
+
+						<div class="form-input">
+							<input id="flex-direction-column-reverse" type="radio" name="flexDirection" value="column-reverse">
+							<label for="flex-direction-column-reverse">column-reverse</label>
 						</div>
-						<!-- end align items -->
-						<!-- align content -->
-						<div class="form-row">
-							<h4>Align Content</h4>
-							<div class="form-input">
-								<input type="radio" id="align-content-stretch" name="alignContent" value="stretch">
-								<label for="align-content-stretch">stretch</label>
-							</div>
-							<div class="form-input">
-								<input type="radio" id="align-content-flex-start" name="alignContent" value="flex-start">
-								<label for="align-content-flex-start">flex-start</label>
-							</div>
-							<div class="form-input">
-								<input type="radio" id="align-content-flex-end" name="alignContent" value="flex-end">
-								<label for="align-content-flex-end">flex-end</label>
-							</div>
-							<div class="form-input">
-								<input type="radio" id="align-content-center" name="alignContent" value="center">
-								<label for="align-content-center">center</label>
-							</div>
-							<div class="form-input">
-								<input type="radio" id="align-content-space-between" name="alignContent" value="space-between">
-								<label for="align-content-space-between">space-between</label>
-							</div>
-							<div class="form-input">
-								<input type="radio" id="align-content-space-around" name="alignContent" value="space-around">
-								<label for="align-content-space-around">space-around</label>
-							</div>
-						</div>
-						<!-- end align content -->
 					</div>
-					<!-- width -->
-					<div class="form-row">
-						<label for="item-width">Ancho de caja:</label>
-						<input id="item-width" type="range" name="item-width" step="1" max="100" value="50">
-						<span id="item-width-value">50</span>
+					<div class="container-option">
+						<h4>Flex Wrap</h4>
+						<div class="form-input">
+							<input type="radio" id="flex-wrap-nowrap" name="flexWrap" value="nowrap">
+							<label for="flex-wrap-nowrap">nowrap</label>
+						</div>						
+						<div class="form-input">
+							<input type="radio" id="flex-wrap-wrap" name="flexWrap" value="wrap">
+							<label for="flex-wrap-wrap">wrap</label>
+						</div>
+						<div class="form-input">
+							<input type="radio" id="flex-wrap-wrap-reverse" name="flexWrap" value="wrap-reverse">
+							<label for="flex-wrap-wrap-reverse">wrap-reverse</label>
+						</div>
 					</div>
+					<!-- justify-content -->
+					<div class="container-option">
+						<h4>Justify Content</h4>
 
-					<div class="form-row">
-						<label for="box-content">Contenido</label>
-						<textarea id="box-content" name="box-content"cols="30" rows="10"></textarea>
-					</div>
+						<div class="form-input">
+							<input type="radio" id="justify-content-flex-start" name="justifyContent" value="flex-start">
+							<label for="justify-content-flex-start">flex-start</label>
+						</div>
 
-					<!-- end width -->
-					<div class="form-row">
-						<button id="add-box" type="submit">Añadir Caja</button>
-						<button id="delete-box">Borrar Caja</button>
+						<div class="form-input">
+							<input type="radio" id="justify-content-flex-end" name="justifyContent" value="flex-end">
+							<label for="justify-content-flex-end">flex-end</label>
+						</div>
+
+						<div class="form-input">
+							<input type="radio" id="justify-content-center" name="justifyContent" value="center">
+							<label for="justify-content-center">center</label>
+						</div>
+
+						<div class="form-input">
+							<input type="radio" id="justify-content-space-between" name="justifyContent" value="space-between">
+							<label for="justify-content-space-between">space-between</label>
+						</div>
+
+						<div class="form-input">
+							<input type="radio" id="justify-content-space-around" name="justifyContent" value="space-around">
+							<label for="justify-content-space-around">space-around</label>
+						</div>
 					</div>
-				</form>
-			</fieldset>
+					<!-- end justify-content -->
+					<!-- align items -->
+					<div class="container-option">
+						<h4>Align Items</h4>
+						<div class="form-input">
+							<input type="radio" id="align-items-stretch" name="alignItems" value="stretch">
+							<label for="align-items-stretch">stretch</label>
+						</div>
+						<div class="form-input">
+							<input type="radio" id="align-items-flex-start" name="alignItems" value="flex-start">
+							<label for="align-items-flex-start">flex-start</label>
+						</div>
+						<div class="form-input">
+							<input type="radio" id="align-items-flex-end" name="alignItems" value="flex-end">
+							<label for="align-items-flex-end">flex-end</label>
+						</div>
+						<div class="form-input">
+							<input type="radio" id="align-items-center" name="alignItems" value="center">
+							<label for="align-items-center">center</label>
+						</div>
+						<div class="form-input">
+							<input type="radio" id="align-items-baseline" name="alignItems" value="baseline">
+							<label for="align-items-baseline">baseline</label>
+						</div>
+					</div>
+					<!-- end align items -->
+					<!-- align content -->
+					<div class="container-option">
+						<h4>Align Content</h4>
+						<div class="form-input">
+							<input type="radio" id="align-content-stretch" name="alignContent" value="stretch">
+							<label for="align-content-stretch">stretch</label>
+						</div>
+						<div class="form-input">
+							<input type="radio" id="align-content-flex-start" name="alignContent" value="flex-start">
+							<label for="align-content-flex-start">flex-start</label>
+						</div>
+						<div class="form-input">
+							<input type="radio" id="align-content-flex-end" name="alignContent" value="flex-end">
+							<label for="align-content-flex-end">flex-end</label>
+						</div>
+						<div class="form-input">
+							<input type="radio" id="align-content-center" name="alignContent" value="center">
+							<label for="align-content-center">center</label>
+						</div>
+						<div class="form-input">
+							<input type="radio" id="align-content-space-between" name="alignContent" value="space-between">
+							<label for="align-content-space-between">space-between</label>
+						</div>
+						<div class="form-input">
+							<input type="radio" id="align-content-space-around" name="alignContent" value="space-around">
+							<label for="align-content-space-around">space-around</label>
+						</div>
+					</div>
+					<!-- end align content -->
+				</div>
+				<!-- width -->
+				<div class="container-width">
+					<label for="item-width">Ancho de caja:</label>
+					<input id="item-width" type="range" name="item-width" step="1" max="100" value="50">
+					<span id="item-width-value">50</span>
+				</div>
+
+				<div class="container-content">
+					<label for="box-content">Contenido</label>
+					<textarea id="box-content" name="box-content"cols="30" rows="10"></textarea>
+				</div>
+
+				<!-- end width -->
+				<div class="buttons-row">
+					<button id="add-box" type="submit">Añadir Caja</button>
+					<button id="delete-box">Borrar Caja</button>
+				</div>
+			</form>
 		</section>
 		<section id="flexbox-container">
 			<div class="flex-item">
